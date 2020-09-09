@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.function.IntConsumer;
+import java.util.stream.IntStream;
 
 public class OperationStream {
 
@@ -12,5 +14,7 @@ public class OperationStream {
         numbers.add(5);
         Iterator<Integer> iterator = numbers.iterator();
         iterator.forEachRemaining(number-> System.out.println(number.longValue()));
+        System.out.println("#######");
+        IntStream.rangeClosed(0,10).iterator().forEachRemaining((IntConsumer) value -> System.out.println(value));
     }
 }
